@@ -10,3 +10,8 @@ et affichez les deux informations dans une liste
 (un item pour la largeur et un item pour la hauteur)
 que vous insérez dans la section d'id "infos" après le titre
 */
+const styleElt = getComputedStyle(document.getElementById("contenu"));
+const listeElt = document.createElement("ul");
+
+const longueurElt = document.createElement("li");
+const hauteurElt = document.createElement("li");

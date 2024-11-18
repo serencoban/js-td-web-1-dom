@@ -34,7 +34,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference
 	* centrez-le autour d'une largeur de 5em;
 	* centrez-y le texte ;
 */
-
+document.querySelector("p");
 
 
 

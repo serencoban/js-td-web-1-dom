@@ -17,14 +17,16 @@ La propriété innerHTML
 */
 /*
 EXERCICE 1 :
-1. Enregistrer l'ul d'id "langages" dans la variable ulElt et l'afficher
+1. Enregistrer l'ul d'id "lanÒgages" dans la variable ulElt et l'afficher
 2. Ajouter un nouveau langage (C) à cette liste et la réafficher
 	(Aide : on lui ajoute (opérateur+=) une entrée sous la forme d'une balise <li>)
 3. Vider la liste de tout son contenu et la réafficher
 */
+const ulElt = document.getElementById("langages");
+console.log(ulElt);
 
-
-
+ulElt.innerHTML += '<li id ="c">C</li>'
+console.log(ulElt.innerHTML);
 
 
 // 2. Le contenu textuel
@@ -36,9 +38,8 @@ EXERCICE 2 :
 Compléter le titre du document pour qu'il devienne
 "Quelques langages de programmation" et le réafficher
 */
-
-
-
+const titreELt = document.querySelector("h1").textContent = "Quelques langages de programmation";
+console.log(titreELt);
 
 // 3. Les attributs
 /*
@@ -54,8 +55,10 @@ EXERCICE 3 :
 	- via la propriété id de l'élément h1
 */
 
-
-
+const titreeElt = document.querySelector("h1");
+console.log(titreeElt);
+titreeElt.setAttribute("id", "titre");
+console.log(titreeElt)
 
 // 4. Les classes
 /*
@@ -72,7 +75,7 @@ EXERCICE 4 :
 - Lui ajouter la classe "titre"
 - L'afficher
 */
-
+const titreeeELt = document.querySelector(".debut").remove("debut");
 
 
 
@@ -85,6 +88,8 @@ EXERCICE 5 :
 - Retester le script
 */
 
+const liElt = document.querySelector("ul il:first-child").setAttribute("class", "hide");
+console.log(liElt);
 
 
 

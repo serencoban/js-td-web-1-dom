@@ -20,8 +20,15 @@ SOURCE : https://github.com/oc-courses/javascript-web
     - si l'élément d'id "contrebasse" possède la classe "cordes" (doit afficher "Aucun élément ne possède l'id contrebasse")
 */
 
-
-
+function getInfosLiens(){
+    const aElement = document.querySelectorAll('a');
+    console.log('le nombre total de liens :' + aElement.length);
+    if (aElement.length > 0){
+        console.log('premier :' + aElement[0]);
+        console.log('dernier :' + aElement[aElement.length - 1]);
+    }
+}
+getInfosLiens();
 
 
 

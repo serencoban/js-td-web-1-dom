@@ -17,7 +17,6 @@ AIDES :
 
 
 
-
 // Doit afficher le noeud h1
 afficherEnfant(document.body, 1);
 

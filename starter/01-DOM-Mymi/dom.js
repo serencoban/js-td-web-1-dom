@@ -6,72 +6,72 @@ http://icant.co.uk/articles/domessentials/
 */
 
 /* 1. Cibler l'élément d'id nav */
-
+console.log(document.getElementById("nav"));
 
 /* 2. Récupérer tous les li */
-
+console.log(document.querySelectorAll("li"));
 
 /* 3. Cibler le 4e li */
-
+console.log(document.getElementById("li4"));
 
 /* 4. Compter le nombre de li dans la page */
-
+console.log(document.querySelectorAll("li").length);
 
 /* 5. Cibler le premier li pair */
-
+console.log(document.querySelector('.pair'));
 
 /* 6. Récupérer tous les li de classe impair */
-
+console.log(document.querySelectorAll(".impair"));
 
 /* a) afficher ce qu'on obtient */
 
 
 /* b) afficher le 2e li de classe impair */
-
+console.log(document.querySelectorAll(".pair")[1]);
 
 /* c) afficher chacun des li impair */
-
-
-
+for (const liElement of document.querySelectorAll(".impair")){
+    console.log(liElement);
+}
 /* d) compter le nombre de li de classe impair dans la page */
-
+console.log(document.querySelectorAll(".impair").length);
 
 
 /* 7. Cibler le 4e li puis, à partir de là, cibler son frère juste avant lui */
-
-
+document.getElementById("li4");
+console.log(document.getElementById("li4").previousSibling.previousSibling);
 
 /* 8. Cibler le 4e li puis, à partir de là, cibler le suivant */
-
-
+document.getElementById("li4");
+console.log(document.getElementById("li4").nextSibling.nextSibling);
 
 /* 9. Cibler le parent du 4e li */
-
-
+console.log(document.querySelector("#li4").parentNode);
 
 /* 10. Récupérer tous les enfants de l'ul */
-
+console.log(document.querySelectorAll("ul li"));
 
 /* a) afficher ce qu'on obtient */
 
 /* b) cibler le 1er enfant de l'ul */
-
+console.log(document.querySelector("ul li:first-child"));
 
 /* c) cibler le dernier enfant de l'ul */
-
+console.log(document.querySelector("ul li:last-child"));
 
 /* c) cibler le 4e enfant de l'ul */
-
-
+console.log(document.querySelector("ul li:nth-child(4)"));
 
 /* 11. Chaînage de méthodes - que retournent les expressions suivantes ? */
-/* a) document.getElementById("nav"). getElementsByTagName("li")[3].firstChild */
+console.log(document.getElementById("nav"). getElementsByTagName("li")[3].firstChild);
+//la a de photo
 
+/*
+console.log(document. getElementsByTagName("li")[2].childNodes[3].firstChild);
+// undefined
+*/
 
-/* b) document. getElementsByTagName("li")[2].childNodes[3].firstChild */
-
-
-/* c) document. getElementsByTagName("li")[2].firstChild.firstChild */
+console.log(document. getElementsByTagName("li")[2].firstChild.firstChild)
 
 
 
@@ -86,24 +86,30 @@ http://icant.co.uk/articles/domessentials/
 
 /* 13. Changer le texte "Photos" en "Visuals" */
 
-
+document.getElementById('li4').firstElementChild.textContent ='Visuals'
 
 /* 14. Modifier les attributs d'un élément */
-/* a) Changer la valeur de l'attribut href du lien "Photos" en "photos.php" */
+    /* a) Changer la valeur de l'attribut href du lien "Photos" en "photos.php" */
+document.getElementById("li4").firstElementChild.setAttribute("href", "photos.php");
 
 
 /* a) Lui ajouter un attribut title avec la valeur "voir mes photos" */
-
+document.getElementById("li4").firstElementChild.setAttribute("title", "voir mes photos")
 
 /* 15. Supprimer le dernier li du menu
        (faites-le en utilisant la méthode querySelector pour cible l'ul
         et querySelectorAll pour cibler les li)
 */
 
-
+const ul = document.querySelector("#nav");
+const lastLi = ul.lastElementChild;
+ul.removeChild(lastLi);
 
 /* 16. Ajouter un li à la fin de la liste */
 
+const newLi = document.createElement("li");
+newLi.textContent = "Nouveau lien";
+ul.appendChild(newLi);
 
 
 
