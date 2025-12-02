@@ -13,3 +13,8 @@ https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation.
 */
 
 
+const containerElement = document.getElementById("contenu")
+
+const p = document.createElement("p");
+p.innerHTML = 'En voici une <a href="https://fr.wikipedia.org/wiki/Liste_des_langages_de_programmation">liste</a> plus complète.';
+containerElement.insertAdjacentElement("beforeend", p);

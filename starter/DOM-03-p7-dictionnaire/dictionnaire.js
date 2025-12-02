@@ -29,7 +29,6 @@ const mots =[
     }
 ]
 
-console.log(mots);
 
     const dlElement = document.getElementById('contenu');
 

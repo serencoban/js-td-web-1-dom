@@ -49,9 +49,9 @@ console.log(document.body.nodeType);
 
 
 // 3. Accéder aux enfants d'un nœud élément
-/*
-Chaque objet du DOM de type élément possède une propriétéchildNodes.
-Il s'agit d'une collection ordonnée regroupant tous ses nœuds enfants sous la forme d'objets DOM.
+/*OM de type élément possède une propriétéchildNodes.
+Il s'agit d'une c
+Chaque objet du Dollection ordonnée regroupant tous ses nœuds enfants sous la forme d'objets DOM.
 On peut utiliser cette collection un peu comme un tableau pour accéder aux différents enfants d'un nœud.
 */
 /* 
